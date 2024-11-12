@@ -315,10 +315,10 @@ nav .fa {
 .portfolio-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Spacing between grid items */
+  gap: 20px;
   padding: 20px;
   width: 100%;
-  max-width: 1200px; /* Constrain max width */
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -333,15 +333,17 @@ nav .fa {
 }
 
 .grid-item img {
-  width: 100%; /* Full width within the grid item */
-  height: 250px; /* Fixed height for uniformity */
-  object-fit: cover; /* Crop the image to fill the container */
-  transition: 1s;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: contain;
+  transition: 0.3s;
 }
 
+/* rotate image when hovered over
 .grid-item:hover img {
   animation: rotation 10s infinite linear;
-}
+}*/
 
 .grid-item img:hover {
   cursor: pointer;
@@ -353,7 +355,7 @@ nav .fa {
   color: white;
 }
 
-/* Keyframes for rotation animation */
+/* Keyframes for rotation animation 
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -361,7 +363,7 @@ nav .fa {
   to {
     transform: rotate(360deg);
   }
-}
+}*/
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
