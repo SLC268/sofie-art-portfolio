@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* reveal and rotation animation  */
+/* reveal animation  */
 
 .reveal {
   position: relative;
@@ -153,16 +153,16 @@ nav .fa {
   .nav-links ul li {
     display: block;
     text-align: left;
-    padding: 5px 50px;
+    padding: 5px 30px;
   }
 
   #nav-links-sub {
     left: -200px;
     text-align: right;
-    margin-top: 50px;
+    margin-top: 40px;
     position: absolute;
     height: 100vh;
-    width: 30%;
+    width: 35%;
     backdrop-filter: blur(3px);
     transition: 1s;
     background-color: black;
@@ -196,7 +196,6 @@ nav .fa {
   height: 100vh;
   object-fit: cover;
 }
-
 .hero-title {
   width: 100%;
   display: flex;
@@ -210,7 +209,7 @@ nav .fa {
   color: white;
   font-weight: 900;
   letter-spacing: 30px;
-  margin: 0; /* Remove the margin to avoid misalignment */
+  margin: 0;
   position: relative;
   transition: 0.7s;
   z-index: 15;
@@ -242,9 +241,9 @@ nav .fa {
     letter-spacing: 5px;
   }
 
-  /*#doodles-by-sofie {
+  #doodles-by-sofie {
     display: none;
-  }*/
+  }
 }
 
 @media (max-width: 700px) {
@@ -253,9 +252,9 @@ nav .fa {
     letter-spacing: 2px;
   }
 
-  /*#doodles-by-sofie {
+  #doodles-by-sofie {
     display: none;
-  }*/
+  }
 }
 
 /* About Me Section styles */
@@ -427,7 +426,7 @@ nav .fa {
 /* Socials Section Styles */
 
 #socials {
-  height: auto;
+  height: 100vh;
   min-height: 100vh;
   max-width: 100vw;
   background-color: #000000;
