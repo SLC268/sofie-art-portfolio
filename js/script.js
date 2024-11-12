@@ -15,3 +15,18 @@ window.addEventListener("scroll", reveal);
           }
         }
       }
+
+
+
+//adding responsive nav for mobile screens
+
+function toggleMenu() {
+    var x = document.getElementById("nav-links-sub");
+    if (x.style.left != "0px") {
+      x.style.left = "0px";
+      document.body.style.overflowY = "hidden";
+    } else {
+      x.style.left = "-200px";
+      document.body.style.overflowY = "visible";
+    }
+  }

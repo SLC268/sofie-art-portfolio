@@ -478,4 +478,8 @@ nav .fa {
   #footer-section {
     display: none;
   }
+
+  nav {
+    background-color: #000000;
+  }
 }
