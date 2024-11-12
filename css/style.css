@@ -479,7 +479,8 @@ nav .fa {
     display: none;
   }
 
+  header nav,
   nav {
-    background-color: #000000;
+    background-color: #000000 !important;
   }
 }
