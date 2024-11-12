@@ -212,20 +212,20 @@ nav .fa {
   }
 }
 
-/* About Us Section styles */
+/* About Me Section styles */
 
-#about-us {
+#about-me {
   min-height: 100vh;
   max-width: 100vw;
   background-color: #000000;
   min-height: 100vh;
 }
 
-#about-us p {
+#about-me p {
   color: white;
 }
 
-.about-us-container {
+.about-me-container {
   text-align: left;
   width: 80%;
   margin: auto;
@@ -236,18 +236,18 @@ nav .fa {
   justify-content: center;
 }
 
-.about-us-row {
+.about-me-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.about-us-col {
+.about-me-col {
   padding: 10px;
   flex-basis: 31%;
 }
 
-.about-us-col h3 {
+.about-me-col h3 {
   color: white;
   margin-bottom: 10px;
 }
@@ -255,12 +255,123 @@ nav .fa {
 /* About Us Section Responsiveness */
 
 @media (max-width: 700px) {
-  #about-us {
+  #about-me {
     padding: 10%;
     padding-top: 20%;
     padding-bottom: 20%;
   }
-  .about-us-row {
+  .about-me-row {
     flex-direction: column;
+  }
+}
+
+/* Lightbox Styles */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.lightbox .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Portfolio Section Styles */
+
+#my-portfolio {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: #000000;
+  margin: auto;
+  text-align: center;
+}
+
+.portfolio-grid-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Spacing between grid items */
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Constrain max width */
+  margin: auto;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.grid-item:hover {
+  transform: translateY(-20px);
+}
+
+.grid-item img {
+  width: 100%; /* Full width within the grid item */
+  height: 250px; /* Fixed height for uniformity */
+  object-fit: cover; /* Crop the image to fill the container */
+  transition: 1s;
+}
+
+.grid-item:hover img {
+  animation: rotation 10s infinite linear;
+}
+
+.grid-item img:hover {
+  cursor: pointer;
+}
+
+.grid-item p {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Keyframes for rotation animation */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .portfolio-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid-container {
+    grid-template-columns: 1fr; /* 1 column on small screens */
   }
 }

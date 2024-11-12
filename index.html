@@ -27,8 +27,8 @@
 
           <div id="nav-links-sub">
             <ul>
-              <li><a href="#about-us">about</a></li>
-              <li><a href="#our-products">products</a></li>
+              <li><a href="#about-me">about</a></li>
+              <li><a href="#portfolio">portfolio</a></li>
               <li><a href="#contact">contact</a></li>
             </ul>
           </div>
@@ -49,10 +49,12 @@
       </div>
     </section>
 
-    <section id="about-us">
-      <div class="about-us-container">
-        <div class="about-us-row reveal">
-          <div class="about-us-col">
+    <!-- About me section -->
+
+    <section id="about-me">
+      <div class="about-me-container">
+        <div class="about-me-row reveal">
+          <div class="about-me-col">
             <h3>about me</h3>
             <p>
               Welcome to the place where I throw my doodles, art, and creations
@@ -60,14 +62,14 @@
               yours too!
             </p>
           </div>
-          <div class="about-us-col">
+          <div class="about-me-col">
             <h3>inquiries</h3>
             <p>
               Any inquiries are welcome, via email or the message function on
               this site.
             </p>
           </div>
-          <div class="about-us-col">
+          <div class="about-me-col">
             <h3>a call away</h3>
             <p>Contact: +45 22 93 63 12</p>
             <p>
@@ -81,6 +83,43 @@
       </div>
     </section>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Portfolio Section -->
+
+    <section id="my-portfolio">
+      <div class="portfolio-grid-wrapper reveal">
+        <div class="portfolio-grid-container">
+          <!-- Each grid item includes an image with a click event -->
+          <div class="grid-item">
+            <img
+              src="assets/images/one-line-woman-with-wings.jpg"
+              alt="woman-with-wings"
+              onclick="openLightbox('assets/images/one-line-woman-with-wings.jpg')"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="assets/images/miss-missy.jpg"
+              alt="miss-missy"
+              onclick="openLightbox('assets/images/miss-missy.jpg')"
+            />
+          </div>
+          <!-- Add more items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close-btn">&times;</span>
+      <img
+        class="lightbox-content"
+        id="lightbox-img"
+        src=""
+        alt="Full-size artwork"
+      />
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/lightbox.js"></script>
   </body>
 </html>
