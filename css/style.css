@@ -123,6 +123,51 @@ nav .fa {
   display: none;
 }
 
+/* Responsivess to Nav Section */
+
+@media (max-width: 700px) {
+  header,
+  nav {
+    height: auto;
+  }
+  nav {
+    background-color: black;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .sticky-bg {
+    backdrop-filter: none;
+  }
+  .nav-links .hero-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links ul li {
+    display: block;
+    text-align: left;
+    padding: 5px 50px;
+  }
+
+  #nav-links-sub {
+    left: -200px;
+    text-align: right;
+    margin-top: 50px;
+    position: absolute;
+    height: 100vh;
+    width: 30%;
+    backdrop-filter: blur(3px);
+    transition: 1s;
+    background-color: black;
+  }
+}
+
 /* Landing Section Styles */
 
 #hero-section {
@@ -477,10 +522,5 @@ nav .fa {
 @media (max-width: 700px) {
   #footer-section {
     display: none;
-  }
-
-  header nav,
-  nav {
-    background-color: #000000 !important;
   }
 }
